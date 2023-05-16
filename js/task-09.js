@@ -1,4 +1,4 @@
-function getRandomHexColor() {
+const getRandomHexColor = function () {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
@@ -12,7 +12,7 @@ const nameColorRef = document.querySelector('.color')
 btnRef.addEventListener('click', onBtnRefClick);
 
 function onBtnRefClick (event) {
-  bodyRef.style.backgroundColor = getRandomHexColor();
+  bodyRef.style.backgroundColor = getRandomHexColor ();
 
-  nameColorRef.textContent = getRandomHexColor();
+  nameColorRef.textContent = getRandomHexColor ();
 }
